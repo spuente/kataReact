@@ -19,5 +19,9 @@ describe('Alphabet', () => {
         letters: letters
       });
     });
+
+    it('should show first line with number 1 and text from b to z', () => {
+      expect(component.find('.first').text()).toBe('abc');
+    });
   });
 });
