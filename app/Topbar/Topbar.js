@@ -14,9 +14,11 @@ class Topbar extends Component {
   render() {
     return (
       <ul>
-        <li><Link to="/">Main</Link></li>
-        <li><Link to="/alphabet">Alphabet</Link></li>
-        <li><Link to="/encryption">Encryption</Link></li>
+        {
+          this.state.options.map((option, index) => {
+            return <li><Link to={option.to}>{option.text}</Link></li>;
+          })
+        }
       </ul>
     );
   }
