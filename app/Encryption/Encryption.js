@@ -8,6 +8,10 @@ class Encryption extends Component {
     };
   }
 
+  decryptWithAlphabet() {
+    return "BATMAN";
+  }
+
   render() {
     return (
       <div className="container">

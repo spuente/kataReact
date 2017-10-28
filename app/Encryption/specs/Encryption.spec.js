@@ -18,4 +18,15 @@ describe('Encryption', () => {
       });
     });
   });
+
+  describe('decryptWithAlphabet', () => {
+    it('should decrypt text using the alphabet from the state', () => {
+      let encryptedText = "POHAOB";
+      let expectedDecryptedText = "BATMAN";
+
+      let decryptedText = instance.decryptWithAlphabet(encryptedText);
+
+      expect(decryptedText).toBe(expectedDecryptedText);
+    });
+  });
 });
