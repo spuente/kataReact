@@ -33,7 +33,14 @@ describe('Alphabet', () => {
         expect(component.find('.indexNumber').at(24).text()).toBe('25');
     });
 
+    it('should display text of the alphabet starting with each letter from b to z for each alphabet entry', () => {
+        expect(component.find('.alphabet').length).toBe(25);
 
+        expect(component.find('.alphabet').at(0).text()).toBe('bcdefghijklmnopqrstuvwxyza');
+        expect(component.find('.alphabet').at(1).text()).toBe('cdefghijklmnopqrstuvwxyzab');
+        expect(component.find('.alphabet').at(14).text()).toBe('pqrstuvwxyzabcdefghijklmno');
+        expect(component.find('.alphabet').at(24).text()).toBe('zabcdefghijklmnopqrstuvwxy');
+    });
 
     describe('alphabetStartingWithIndex', () => {
       it('returns alphabet starting from first letter when index passed is 0', () => {
