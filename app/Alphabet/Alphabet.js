@@ -10,10 +10,10 @@ export class Alphabet extends Component {
   }
 
   alphabetStartingWithIndex(index) {
-    if (index === 2) {
-      return 'cdefghijklmnopqrstuvwxyzab';
-    }
-    return 'abcdefghijklmnopqrstuvwxyz';
+    let lastPartOfAlphabet = this.state.letters.slice(index);
+    let firstPartOfAlphabet = this.state.letters.slice(0, index);
+    let alphabetWithOffset = lastPartOfAlphabet.concat(firstPartOfAlphabet);
+    return alphabetWithOffset.join('');
   }
 
   render() {

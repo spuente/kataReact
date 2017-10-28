@@ -34,6 +34,11 @@ describe('Alphabet', () => {
         let alphabet = instance.alphabetStartingWithIndex(2);
         expect(alphabet).toEqual('cdefghijklmnopqrstuvwxyzab');
       });
+
+      it('returns alphabet starting from letter p when index passed is 15', () => {
+        let alphabet = instance.alphabetStartingWithIndex(15);
+        expect(alphabet).toEqual('pqrstuvwxyzabcdefghijklmno');
+      });
     });
   });
 });
