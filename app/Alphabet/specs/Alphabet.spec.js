@@ -20,8 +20,8 @@ describe('Alphabet', () => {
       });
     });
 
-    it('should show first line with number 1 and text from b to z', () => {
-      expect(component.find('.first').text()).toBe('abc');
+    it('should display 25 list items to hold all alphabet entries starting from b to z', () => {
+        expect(component.find('li').length).toBe(25);
     });
 
     describe('alphabetStartingWithIndex', () => {

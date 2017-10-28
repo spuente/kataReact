@@ -18,14 +18,13 @@ export class Alphabet extends Component {
 
   render() {
     return (
-      <div>
-        <div className="container">
-          Alphabet Page
-        </div>
-        <span className="first">
-          abc
-        </span>
-      </div>
+      <ol>
+        {
+          this.state.letters.slice(1).map((index, letter) => {
+            return <li>{letter}</li>;
+          })
+        }
+      </ol>
     );
   }
 }
