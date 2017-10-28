@@ -10,6 +10,9 @@ export class Alphabet extends Component {
   }
 
   alphabetStartingWithIndex(index) {
+    if (index === 2) {
+      return 'cdefghijklmnopqrstuvwxyzab';
+    }
     return 'abcdefghijklmnopqrstuvwxyz';
   }
 
