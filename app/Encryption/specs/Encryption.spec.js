@@ -12,8 +12,10 @@ describe('Encryption', () => {
   });
 
   describe('on instance', () => {
-    it('should defined state', () => {
-      expect(instance.state).toEqual({});
+    it('should have alphabet for hint 14 as state', () => {
+      expect(instance.state).toEqual({
+        alphabet: 'OPQRSTUVWXYZABCDEFGHIJKLMN'
+      });
     });
   });
 });
