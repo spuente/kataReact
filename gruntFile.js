@@ -5,7 +5,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-karma');
 
   require('load-grunt-tasks')(grunt);
-  
+
   grunt.initConfig({
     eslint: {
       options: {
@@ -20,6 +20,6 @@ module.exports = function (grunt) {
       }
     }
   });
-  
+
   grunt.registerTask('default', ['eslint', 'karma']);
 };

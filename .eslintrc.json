@@ -7,7 +7,7 @@
   },
 
   "plugins": [ "react", "jasmine" ],
-  
+
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
@@ -35,8 +35,8 @@
       "jsx": true
     }
   },
-  
-  
+
+
   "rules": {
     //
     //Possible Errors
@@ -69,7 +69,7 @@
     "use-isnan": 2, // disallow comparisons with the value NaN
     "valid-jsdoc": 2, // Ensure JSDoc comments are valid (off by default)
     "valid-typeof": 2, // Ensure that the results of typeof are compared against a valid string
-    
+
     //
     // Best Practices
     //
@@ -123,7 +123,7 @@
     "vars-on-top": 2, // requires to declare all vars on top of their containing scope (off by default)
     "wrap-iife": 2, // require immediate function invocation to be wrapped in parentheses (off by default)
     "yoda": 2, // require or disallow Yoda conditions
-    
+
     //
     // Strict Mode
     //
@@ -146,7 +146,7 @@
     "no-undefined": 2, // disallow use of undefined variable (off by default)
     "no-unused-vars": 2, // disallow declaration of variables that are not used in the code
     "no-use-before-define": 2, // disallow use of variables before they are defined
-    
+
     //
     //Stylistic Issues
     //
@@ -162,7 +162,7 @@
     "func-names": 0, // require function expressions to have a name (off by default)
     "func-style": 0, // enforces use of function declarations or expressions (off by default)
     "key-spacing": [1, {"beforeColon": false, "afterColon": true}], // enforces spacing between keys and values in object literal properties
-    
+
     "max-nested-callbacks": [1, 5], // specify the maximum depth callbacks can be nested (off by default)
     "new-cap": [1, {"newIsCap": true, "capIsNew": false}], // require a capital letter for constructors
     "new-parens": 1, // disallow the omission of parentheses when invoking a constructor with no arguments

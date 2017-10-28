@@ -5,7 +5,7 @@ export class Alphabet extends Component {
     super(props);
     this.state = {};
   }
-  
+
   render() {
     return (
       <span>This is a line</span>

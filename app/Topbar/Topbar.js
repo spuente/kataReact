@@ -6,7 +6,7 @@ class Topbar extends Component {
     super(props);
     this.state = {test: 'Hola mundo'};
   }
-  
+
   render() {
     return (
       <ul>
