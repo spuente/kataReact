@@ -18,13 +18,16 @@ export class Alphabet extends Component {
 
   render() {
     return (
-      <ol>
-        {
-          this.state.letters.slice(1).map((index, letter) => {
-            return <li>{letter}</li>;
-          })
-        }
-      </ol>
+      <div className="container">
+          {this.state.letters.slice(1).map((letter, index) => {
+            return (
+              <div className="alphabetEntry" key={index}>
+                <span className="indexNumber">{index + 1}</span>
+
+              </div>
+            )
+          })}
+      </div>
     );
   }
 }

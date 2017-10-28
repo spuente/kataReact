@@ -20,9 +20,20 @@ describe('Alphabet', () => {
       });
     });
 
-    it('should display 25 list items to hold all alphabet entries starting from b to z', () => {
-        expect(component.find('li').length).toBe(25);
+    it('should display 25 div items to hold all alphabet entries starting from b to z', () => {
+        expect(component.find('.alphabetEntry').length).toBe(25);
     });
+
+    it('should display index number for each alphabet entry', () => {
+        expect(component.find('.indexNumber').length).toBe(25);
+
+        expect(component.find('.indexNumber').at(0).text()).toBe('1');
+        expect(component.find('.indexNumber').at(2).text()).toBe('3');
+        expect(component.find('.indexNumber').at(15).text()).toBe('16');
+        expect(component.find('.indexNumber').at(24).text()).toBe('25');
+    });
+
+
 
     describe('alphabetStartingWithIndex', () => {
       it('returns alphabet starting from first letter when index passed is 0', () => {
