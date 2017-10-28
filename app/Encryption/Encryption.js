@@ -4,12 +4,18 @@ class Encryption extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      alphabet: 'OPQRSTUVWXYZABCDEFGHIJKLMN'
+      alphabetForHint: 'OPQRSTUVWXYZABCDEFGHIJKLMN',
+      originalAlphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     };
   }
 
-  decryptWithAlphabet() {
-    return "BATMAN";
+  decryptWithAlphabet(encryptedText) {
+    return encryptedText
+      .split('')
+      .map(e => this.state.alphabetForHint.indexOf(e))
+      .map(e => this.state.originalAlphabet[e])
+      .join('');
+      // .reduce((x, y) => x+y);
   }
 
   render() {

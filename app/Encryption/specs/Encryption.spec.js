@@ -12,17 +12,27 @@ describe('Encryption', () => {
   });
 
   describe('on instance', () => {
-    it('should have alphabet for hint 14 as state', () => {
+    it('should have original alphabet and alphabet for hint 14 as state', () => {
       expect(instance.state).toEqual({
-        alphabet: 'OPQRSTUVWXYZABCDEFGHIJKLMN'
+        alphabetForHint: 'OPQRSTUVWXYZABCDEFGHIJKLMN',
+        originalAlphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
       });
     });
   });
 
   describe('decryptWithAlphabet', () => {
-    it('should decrypt text using the alphabet from the state', () => {
+    it('should decrypt POHAOB using the alphabets from the state', () => {
       let encryptedText = "POHAOB";
       let expectedDecryptedText = "BATMAN";
+
+      let decryptedText = instance.decryptWithAlphabet(encryptedText);
+
+      expect(decryptedText).toBe(expectedDecryptedText);
+    });
+
+    it('should decrypt VCZO using the alphabets from the state', () => {
+      let encryptedText = "VCZO";
+      let expectedDecryptedText = "HOLA";
 
       let decryptedText = instance.decryptWithAlphabet(encryptedText);
 
