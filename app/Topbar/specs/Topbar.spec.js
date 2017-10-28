@@ -22,6 +22,10 @@ describe('Topbar', () => {
   });
 
   it('should instance state with correct params', () => {
-    expect(instance.state).toEqual({test: 'Hola mundo'});
+    expect(instance.state).toEqual({options: [
+      {to: '/', text: 'Main'},
+      {to: '/alphabet', text: 'Alphabet'},
+      {to: '/encryption', text: 'Encryption'}
+    ]});
   });
 });

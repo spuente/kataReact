@@ -4,7 +4,11 @@ import Link from 'react-router-dom/Link';
 class Topbar extends Component {
   constructor(props) {
     super(props);
-    this.state = {test: 'Hola mundo'};
+    this.state = {options: [
+      {to: '/', text: 'Main'},
+      {to: '/alphabet', text: 'Alphabet'},
+      {to: '/encryption', text: 'Encryption'}
+    ]};
   }
 
   render() {
