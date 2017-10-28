@@ -5,7 +5,7 @@ export class Alphabet extends Component {
     super(props);
     let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     this.state = {
-      letters: letters.split('')
+      letters: letters
     };
   }
 
@@ -13,13 +13,13 @@ export class Alphabet extends Component {
     let lastPartOfAlphabet = this.state.letters.slice(index);
     let firstPartOfAlphabet = this.state.letters.slice(0, index);
     let alphabetWithOffset = lastPartOfAlphabet.concat(firstPartOfAlphabet);
-    return alphabetWithOffset.join('');
+    return alphabetWithOffset;
   }
 
   render() {
     return (
       <div className="container">
-        {this.state.letters.slice(1).map((letter, index) => {
+        {this.state.letters.split('').slice(1).map((letter, index) => {
           return (
             <div className="alphabetEntry" key={index}>
               <span className="indexNumber">{index + 1}</span>
