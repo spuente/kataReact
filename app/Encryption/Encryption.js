@@ -21,7 +21,6 @@ class Encryption extends Component {
   render() {
     return (
       <div className="container">
-        Encryption page
         <div className="decryptedResult">
           {this.decryptWithAlphabet('PCAPO')}
         </div>
