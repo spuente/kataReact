@@ -12,10 +12,11 @@ class Encryption extends Component {
   decryptWithAlphabet(encryptedText) {
     return encryptedText
     .split('')
-    .map(e => this.state.alphabetForHint.indexOf(e))
-    .map(e => this.state.originalAlphabet[e])
-    .join('');
-    // .reduce((x, y) => x+y);
+    .map(t => {
+      let index = this.state.alphabetForHint.indexOf(t);
+      return this.state.originalAlphabet[index];
+    })
+    .reduce((allLetters, letter) => allLetters.concat(letter));
   }
 
   render() {
