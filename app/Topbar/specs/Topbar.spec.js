@@ -17,8 +17,8 @@ describe('Topbar', () => {
 
     expect(component.find(Link).length).toBe(3);
     expect(component.find(Link).first().props().to).toBe('/');
-    expect(component.find(Link).at(1).props().to).toBe('/');
-    expect(component.find(Link).last().props().to).toBe('/');
+    expect(component.find(Link).at(1).props().to).toBe('/alphabet');
+    expect(component.find(Link).last().props().to).toBe('/encryption');
   });
   
   it('should instance state with correct params', () => {
