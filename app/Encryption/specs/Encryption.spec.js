@@ -18,6 +18,10 @@ describe('Encryption', () => {
         originalAlphabet: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
       });
     });
+
+    it('should display decrypted result for PCAPO on a div', () => {
+      expect(component.find('.decryptedResult').text()).toBe("BOMBA");
+    });
   });
 
   describe('decryptWithAlphabet', () => {

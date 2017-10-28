@@ -22,6 +22,9 @@ class Encryption extends Component {
     return (
       <div className="container">
         Encryption page
+        <div className="decryptedResult">
+          {this.decryptWithAlphabet("PCAPO")}
+        </div>
       </div>
     );
   }
