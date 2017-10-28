@@ -11,11 +11,11 @@ class Encryption extends Component {
 
   decryptWithAlphabet(encryptedText) {
     return encryptedText
-      .split('')
-      .map(e => this.state.alphabetForHint.indexOf(e))
-      .map(e => this.state.originalAlphabet[e])
-      .join('');
-      // .reduce((x, y) => x+y);
+    .split('')
+    .map(e => this.state.alphabetForHint.indexOf(e))
+    .map(e => this.state.originalAlphabet[e])
+    .join('');
+    // .reduce((x, y) => x+y);
   }
 
   render() {
@@ -23,7 +23,7 @@ class Encryption extends Component {
       <div className="container">
         Encryption page
         <div className="decryptedResult">
-          {this.decryptWithAlphabet("PCAPO")}
+          {this.decryptWithAlphabet('PCAPO')}
         </div>
       </div>
     );

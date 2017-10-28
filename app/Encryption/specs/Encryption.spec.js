@@ -20,14 +20,14 @@ describe('Encryption', () => {
     });
 
     it('should display decrypted result for PCAPO on a div', () => {
-      expect(component.find('.decryptedResult').text()).toBe("BOMBA");
+      expect(component.find('.decryptedResult').text()).toBe('BOMBA');
     });
   });
 
   describe('decryptWithAlphabet', () => {
     it('should decrypt POHAOB using the alphabets from the state', () => {
-      let encryptedText = "POHAOB";
-      let expectedDecryptedText = "BATMAN";
+      let encryptedText = 'POHAOB';
+      let expectedDecryptedText = 'BATMAN';
 
       let decryptedText = instance.decryptWithAlphabet(encryptedText);
 
@@ -35,8 +35,8 @@ describe('Encryption', () => {
     });
 
     it('should decrypt VCZO using the alphabets from the state', () => {
-      let encryptedText = "VCZO";
-      let expectedDecryptedText = "HOLA";
+      let encryptedText = 'VCZO';
+      let expectedDecryptedText = 'HOLA';
 
       let decryptedText = instance.decryptWithAlphabet(encryptedText);
 

@@ -19,14 +19,14 @@ export class Alphabet extends Component {
   render() {
     return (
       <div className="container">
-          {this.state.letters.slice(1).map((letter, index) => {
-            return (
-              <div className="alphabetEntry" key={index}>
-                <span className="indexNumber">{index + 1}</span>
-                <span className="alphabet">{this.alphabetStartingWithIndex(index + 1)}</span>
-              </div>
-            )
-          })}
+        {this.state.letters.slice(1).map((letter, index) => {
+          return (
+            <div className="alphabetEntry" key={index}>
+              <span className="indexNumber">{index + 1}</span>
+              <span className="alphabet">{this.alphabetStartingWithIndex(index + 1)}</span>
+            </div>
+          );
+        })}
       </div>
     );
   }
