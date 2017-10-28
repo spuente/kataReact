@@ -13,8 +13,7 @@ describe('Alphabet', () => {
 
   describe('on instance', () => {
     it('should defined state', () => {
-      // let letters = [...'abcdefghijklmnopqrstuvwxyz'];
-      let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+      let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
       expect(instance.state).toEqual({
         letters: letters
       });

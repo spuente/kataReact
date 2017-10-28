@@ -3,9 +3,9 @@ import React, {Component} from 'react';
 export class Alphabet extends Component {
   constructor(props) {
     super(props);
-    let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     this.state = {
-      letters: letters
+      letters: letters.split('')
     };
   }
 
