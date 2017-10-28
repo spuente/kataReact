@@ -9,6 +9,10 @@ export class Alphabet extends Component {
     };
   }
 
+  alphabetStartingWithIndex(index) {
+    return 'abcdefghijklmnopqrstuvwxyz';
+  }
+
   render() {
     return (
       <div>

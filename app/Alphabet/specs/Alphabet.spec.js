@@ -23,5 +23,12 @@ describe('Alphabet', () => {
     it('should show first line with number 1 and text from b to z', () => {
       expect(component.find('.first').text()).toBe('abc');
     });
+
+    describe('alphabetStartingWithIndex', () => {
+      it('returns alphabet starting from letter a when index passed is 0', () => {
+        let alphabet = instance.alphabetStartingWithIndex(0);
+        expect(alphabet).toEqual('abcdefghijklmnopqrstuvwxyz');
+      });
+    });
   });
 });
