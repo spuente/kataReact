@@ -14,13 +14,13 @@ describe('Alphabet', () => {
   describe('on instance', () => {
     it('should defined state', () => {
       // let letters = [...'abcdefghijklmnopqrstuvwxyz'];
-      let letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+      let letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
       expect(instance.state).toEqual({
         letters: letters
       });
     });
 
-    it('should display 25 div items to hold all alphabet entries starting from b to z', () => {
+    it('should display 25 div items to hold all alphabet entries starting from B to Z', () => {
         expect(component.find('.alphabetEntry').length).toBe(25);
     });
 
@@ -33,34 +33,34 @@ describe('Alphabet', () => {
         expect(component.find('.indexNumber').at(24).text()).toBe('25');
     });
 
-    it('should display text of the alphabet starting with each letter from b to z for each alphabet entry', () => {
+    it('should display text of the alphabet starting with each letter from B to Z for each alphabet entry', () => {
         expect(component.find('.alphabet').length).toBe(25);
 
-        expect(component.find('.alphabet').at(0).text()).toBe('bcdefghijklmnopqrstuvwxyza');
-        expect(component.find('.alphabet').at(1).text()).toBe('cdefghijklmnopqrstuvwxyzab');
-        expect(component.find('.alphabet').at(14).text()).toBe('pqrstuvwxyzabcdefghijklmno');
-        expect(component.find('.alphabet').at(24).text()).toBe('zabcdefghijklmnopqrstuvwxy');
+        expect(component.find('.alphabet').at(0).text()).toBe('BCDEFGHIJKLMNOPQRSTUVWXYZA');
+        expect(component.find('.alphabet').at(1).text()).toBe('CDEFGHIJKLMNOPQRSTUVWXYZAB');
+        expect(component.find('.alphabet').at(14).text()).toBe('PQRSTUVWXYZABCDEFGHIJKLMNO');
+        expect(component.find('.alphabet').at(24).text()).toBe('ZABCDEFGHIJKLMNOPQRSTUVWXY');
     });
 
     describe('alphabetStartingWithIndex', () => {
       it('returns alphabet starting from first letter when index passed is 0', () => {
         let alphabet = instance.alphabetStartingWithIndex(0);
-        expect(alphabet).toEqual('abcdefghijklmnopqrstuvwxyz');
+        expect(alphabet).toEqual('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
       });
 
       it('returns alphabet starting from letter c when index passed is 2', () => {
         let alphabet = instance.alphabetStartingWithIndex(2);
-        expect(alphabet).toEqual('cdefghijklmnopqrstuvwxyzab');
+        expect(alphabet).toEqual('CDEFGHIJKLMNOPQRSTUVWXYZAB');
       });
 
       it('returns alphabet starting from letter p when index passed is 15', () => {
         let alphabet = instance.alphabetStartingWithIndex(15);
-        expect(alphabet).toEqual('pqrstuvwxyzabcdefghijklmno');
+        expect(alphabet).toEqual('PQRSTUVWXYZABCDEFGHIJKLMNO');
       });
 
       it('returns alphabet starting from last letter when index passed is 25', () => {
         let alphabet = instance.alphabetStartingWithIndex(25);
-        expect(alphabet).toEqual('zabcdefghijklmnopqrstuvwxy');
+        expect(alphabet).toEqual('ZABCDEFGHIJKLMNOPQRSTUVWXY');
       });
     });
   });
