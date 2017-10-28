@@ -16,7 +16,9 @@ class Topbar extends Component {
       <ul>
         {
           this.state.options.map((option, index) => {
-            return <li><Link to={option.to}>{option.text}</Link></li>;
+            return <li key={index}>
+              <Link to={option.to}>{option.text}</Link>
+            </li>;
           })
         }
       </ul>
