@@ -25,7 +25,7 @@ describe('Alphabet', () => {
     });
 
     describe('alphabetStartingWithIndex', () => {
-      it('returns alphabet starting from letter a when index passed is 0', () => {
+      it('returns alphabet starting from first letter when index passed is 0', () => {
         let alphabet = instance.alphabetStartingWithIndex(0);
         expect(alphabet).toEqual('abcdefghijklmnopqrstuvwxyz');
       });
@@ -38,6 +38,11 @@ describe('Alphabet', () => {
       it('returns alphabet starting from letter p when index passed is 15', () => {
         let alphabet = instance.alphabetStartingWithIndex(15);
         expect(alphabet).toEqual('pqrstuvwxyzabcdefghijklmno');
+      });
+
+      it('returns alphabet starting from last letter when index passed is 25', () => {
+        let alphabet = instance.alphabetStartingWithIndex(25);
+        expect(alphabet).toEqual('zabcdefghijklmnopqrstuvwxy');
       });
     });
   });
