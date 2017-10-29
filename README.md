@@ -2,23 +2,19 @@
 React with express (TDD environment)
 
 ### GLOBAL DEPEDENCIES
- - NodeJs 6.9.5
-
-   ```
-   $ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-   $ sudo apt-get install -y nodejs
-   ```
+ - NodeJs
 
 ### DEPEDENCIES
  - Install [yarn](https://yarnpkg.com/en/) and execute:
 
   ```
+  $ yarn install
   $ sudo npm install -g nodemon
   $ sudo npm install -g karma-cli
   ```
 
 ### Run app:
-yarn start
+  `$ yarn start`
 
-### Run test:
-yarn test
+### Run tests and linter:
+  `yarn test`
