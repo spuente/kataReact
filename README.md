@@ -17,4 +17,4 @@ React with express (TDD environment)
   `$ yarn start`
 
 ### Run tests and linter:
-  `yarn test`
+  `$ yarn test`
